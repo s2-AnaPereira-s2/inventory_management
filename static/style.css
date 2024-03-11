@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    background-color:darkslategrey
+
+}
+
+header {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 28px;
+    text-shadow: 0px 0px 20px #9bb46d;
+    font-family: system-ui;
+    
+}
+
+form {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 20px;
+    text-shadow: 0px 0px 20px #9bb46d;
+    font-family: system-ui;
+    color: black; 
+}
+
+main {
+    text-align: center;
+    width: auto;
+    height: auto;
+    color: black;    
+}

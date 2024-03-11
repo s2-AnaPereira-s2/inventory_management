@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='systemstyle.css') }}">
+    <title>IMS</title>
+</head>
+<body>
+    <header>
+        <h1>Inventory Management System</h1>
+    </header>
+    <main>
+        <form class="row g-3" action="add" method="post">
+            <div class="col-auto">
+                <label for="product_name" class="product_name">Product name </label><br>
+                <input required type="text" class="form-control-plaintext" id="product_name" name="product_name" placeholder="Product name" ><br>
+                <label for="quantity" class="quantity">Quantity </label><br>
+                <input required type="number" max="5000" min="1" class="form-control-plaintext" id="quantity" name="quantity" placeholder="Quantity" ><br>
+                <label for="price" class="price">Price </label><br>
+                <input required type="number" step="0.01" min="0.01" class="form-control-plaintext" id="price" name="price" placeholder="€" ><br>
+                <label for="location" class="location">Location </label><br>
+                    <select required id="dropdown" name="location">
+                        <option value="">(select one)</option>
+                        <option value="Warehouse1">Warehouse1</option>
+                        <option value="Warehouse2">Warehouse2</option>
+                        <option value="Warehouse3">Warehouse3</option>
+                        <option value="Warehouse4">Warehouse4</option>
+                    </select><br>
+                </label>
+            </div><br>
+            <div class="col-auto">
+              <button type="submit" id="add_submit" class="add_submit" name="add_submit" class="btn btn-primary mb-3">Add</button>
+            </div>
+        </form>  
+        {% if message %}
+            <p>{{message}}</p>
+        {% endif %}
+    </main>
+    <footer>
+        <a id="displayhome" href="/">
+            HOME
+        </a>
+    </footer>
+</body>
+</html>

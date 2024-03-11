@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='systemstyle.css') }}">
+    <title>IMS</title>
+</head>
+<body>
+    <header>
+        <h1>Inventory Management System</h1>
+    </header>
+    <main>
+        <form class="row g-3" action="delete" method="post">
+            <div class="col-auto">
+              <label for="product_name" class="product_name">Please provide the product name you would like to delete.</label><br>
+              <input type="text" class="form-control-plaintext" id="product_name" name="product_name" placeholder="Product name" >
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary mb-3">Delete</button>
+            </div>
+        </form>
+        {% if message %}
+            <p>{{message}}</p>
+        {% endif %}
+    </main>
+    <footer>
+        <a id="displayhome" href="/">
+            HOME
+        </a>
+    </footer>
+</body>
+</html>

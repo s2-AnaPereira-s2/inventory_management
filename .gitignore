@@ -1,0 +1,2 @@
+# This will omit database files during add/commit/push
+*.db
